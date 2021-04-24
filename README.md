@@ -31,6 +31,10 @@
   - save_model
 
  ```
+ For instance, if you want to load pretrained model you need to use --load_model keyword after calling the file
+ ```
+ [AE project current address]@ python main_AE --load_model
+ ```
  
  ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
