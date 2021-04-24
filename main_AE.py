@@ -17,7 +17,7 @@ parser.add_argument('--epochs', type=int, default=20)
 parser.add_argument('--batch_size', type=int, default=32)
 parser.add_argument('--lr', type=float, default=1e-03)
 parser.add_argument('--weight-decay', type=float, default=1e-3)
-parser.add_argument('--load_model', action='store_false', default=True)
+parser.add_argument('--load_model', action='store_false', default=False)
 parser.add_argument('--save_model', action='store_true', default=True)
 
 
