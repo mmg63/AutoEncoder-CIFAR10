@@ -35,6 +35,10 @@
  ```
  [AE project current address]@ python main_AE --load_model
  ```
+ one example of run load model:
+ ![output](imgs/Figure_1.png)
+ Another model load output:
+ ![output1](imgs/Figure_2.png)
  
  ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
