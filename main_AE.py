@@ -80,7 +80,7 @@ if __name__ == "__main__":
     # load dataset
     # ============
     train_loader = load_train_loader(data_dir='../CIFAR10', batch_size=args.batch_size,
-                                     download_allowed=False, pin_memory=False)
+                                     download_allowed=True, pin_memory=False)
     test_loader = load_test_loader('../CIFAR10', batch_size=args.batch_size, shuffle=True, pin_memory=False)
 
     dataset_classes = CIFAR10_classes()
