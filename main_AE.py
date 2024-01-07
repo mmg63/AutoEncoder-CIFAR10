@@ -17,7 +17,7 @@ parser.add_argument('--epochs', type=int, default=20)
 parser.add_argument('--batch_size', type=int, default=32)
 parser.add_argument('--lr', type=float, default=1e-03)
 parser.add_argument('--weight-decay', type=float, default=1e-3)
-parser.add_argument('--load_model', action='store_true', default=False)
+parser.add_argument('--train_model', action='store_true', default=False)
 parser.add_argument('--save_model', action='store_true', default=True)
 
 
@@ -92,7 +92,7 @@ if __name__ == "__main__":
     optim_AE = optim.Adam(model_AE.parameters(), lr=args.lr,)  # weight_decay=args.weight_decay)
     print(model_AE)
 
-    if args.load_model:
+    if args.train_model==False:
     # ============
     # load model
     # ============
@@ -106,9 +106,10 @@ if __name__ == "__main__":
 
         # plot some images
         itr = iter(train_loader)
-        samples, labels = itr.next()
-        latent, x_hat = model_AE(samples)
-        plot_images(samples, x_hat, dataset_classes, labels, 4)
+        for samples, labels in itr:
+            #samples, labels = itr.next()
+            latent, x_hat = model_AE(samples)
+            plot_images(samples, x_hat, dataset_classes, labels, 4)
 
     else:
         os.system('say Training phase')
