@@ -109,6 +109,7 @@ if __name__ == "__main__":
         for samples, labels in itr:
             #samples, labels = itr.next()
             latent, x_hat = model_AE(samples)
+            print(f'latent space shape: {latent.shape}')
             plot_images(samples, x_hat, dataset_classes, labels, 4)
 
     else:
